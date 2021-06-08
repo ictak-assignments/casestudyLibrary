@@ -1,0 +1,141 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgray;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: blue;
+}
+
+#s1 {
+    text-align: center;
+    /* padding: 0 200px; */
+}
+
+.btn {
+    padding: 10px 20px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 3px black solid;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+    background-color: yellow;
+    text-align: center;
+    margin: 1rem 3rem;
+}
+
+#email {
+    padding: 0 0.9rem;
+    background-color: white;
+    font-weight: 20;
+    color: #000000;
+    /* text-align: center; */
+    margin: 1rem auto 2rem auto;
+    display: block;
+}
+
+#psw {
+    padding: 0 0.9rem;
+    background-color: white;
+    font-weight: 20;
+    color: #000000;
+    /* text-align: center; */
+    margin: 1rem auto 2rem auto;
+    display: block;
+}
+
+#submit {
+    width: 30%;
+    background-color: yellow;
+    color: #000;
+    /* padding: 1.1rem; */
+    text-align: center;
+    margin: 1rem auto;
+    display: block;
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+.red {
+    border: 2px solid red;
+}
+
+.medium {
+    border: 2px solid orange;
+}
+
+.strong {
+    border: 2px solid green;
+}
+
+footer {
+    /* margin-top: 30px; */
+    background-color: rgb(22, 26, 17);
+    padding: 20px;
+    /* position: fixed;
+  bottom: 0; */
+    margin-top: 200px;
+    /* width: 100; */
+}
+
+footer>span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: rgb(18, 135, 202);
+}

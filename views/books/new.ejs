@@ -1,0 +1,51 @@
+<%- include('../partials/abovetitle.ejs') %>
+<title>library</title>
+<%- include('../partials/below-title-bootstrap-link.ejs') %>
+</head> 
+<body class="d-flex flex-column vh-100">
+    <%- include('../partials/navbar')%>
+    <main class="container mt-5">
+        <%- include('../partials/flash')%>
+        <div class="row">
+        <h1 class="text-center">Add A New Book Info</h1>
+            <div class="col-6 offset-3"></div>
+                <form action="/books" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                            <label class="form-label" for="name">Name:</label>
+                            <input class="form-control" type="text" id="name" name="book[name]"required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="location">author:</label>
+                        <input class="form-control" type="text" id="location" name="book[author]"required>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-file custom-file">
+                            <input type="file" class="form-file-input" id="image" name="image" multiple>
+                            <label class="form-file-label" for="image">
+                                <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                                <span class="form-file-button">Browse</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label class="form-label" for="image">Image Url</label>
+                        <input class="form-control" type="text" id="image" name="book[image]"required>
+                    </div> -->
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Descrition</label>
+                        <textarea  class="form-control" type="text" id="description" name="book[description]" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success" >Add</button>
+                    </div>
+                </form>
+            </div>
+                <div>
+                    <a href="/books">All Books page</a>
+                </div>
+        </div>
+    </main>
+    <%- include('../partials/footer')%>
+   
+</body>
+</html>

@@ -1,0 +1,50 @@
+<%- include('../partials/abovetitle.ejs') %>
+<title>library</title>
+<%- include('../partials/below-title-bootstrap-link.ejs') %> 
+
+<body class="d-flex flex-column vh-100">
+    <%- include('../partials/navbar')%>
+    <main class="container mt-5">
+    <%- include('../partials/flash')%>
+        <div>
+            <h1 style="text-align: center;">All Authors</h1>
+
+        </div>
+    <% for(let author  of authors){ %>
+        
+                <div class="col-md-6">
+                    <img class="img-fluid" alt="book-picture"
+                    src="<%=author.images[0].url %> ">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= author.name %> </h5>
+                        <p class="card-text"><%= author.description %></p>
+                        <p class="card-text">
+                            <small class="text-muted">Born in <%= author.nationality%></small>
+                        </p>
+                        <p>
+                            <a class="btn btn-primary" href="/authors/<%=author._id%>">View <%=author.name%></a>
+                        </p>
+                    </div>
+                </div>
+    <% }%>
+                <div class="col-md-6">
+                    <div>
+                        <a href="authors/new">Add Author</a>
+                    </div>
+                    <div>
+                        <p><a href="/">back to index</a></p>
+                    </div>
+
+                </div>
+        </div>  
+    </main>
+    <%- include('../partials/footer')%>
+   
+</body>
+</html>
+
+
+
+    

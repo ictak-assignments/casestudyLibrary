@@ -1,0 +1,13 @@
+
+footer {
+    margin-top: 30px;
+    background-color: rgb(22, 26, 17);
+    padding: 20px;
+  }
+  footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: rgb(18, 135, 202);
+  }
